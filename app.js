@@ -59,6 +59,6 @@ document.addEventListener('keydown', function(event) {
 });
 
 buttonEl.addEventListener('click', () => {
-    h1El.textContent = '';
+    h1El.textContent = 'Who is your BFF?';
     document.body.style.backgroundImage = "url('https://cdn.wallpapersafari.com/26/51/PDOjt4.jpg') ";
 });
