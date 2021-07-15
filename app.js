@@ -51,6 +51,11 @@ document.addEventListener('keydown', function(event) {
         h1El.textContent = 'horsey';
         document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/e6/3f/ac/e63fac00637cce9fb90d67683d3b5e9c.jpg') ";
     }
+
+    if (event.key === 'r') {
+        h1El.textContent = '';
+        document.body.style.backgroundImage = "url('https://cdn.wallpapersafari.com/26/51/PDOjt4.jpg') ";
+    }
 });
 
 buttonEl.addEventListener('click', () => {
