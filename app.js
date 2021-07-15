@@ -1,64 +1,48 @@
 // grab DOM elements
-const h1El = document.getElementById('animal-name');
+
+import { makeSoundAndChangeH1ForCat, makeSoundAndChangeH1ForDog, makeSoundAndChangeH1ForHorse, reset } from './utils.js';
+
+
 const horseEl = document.getElementById('horse-image');
 const dogEl = document.getElementById('dog-image');
 const catEl = document.getElementById('cat-image');
 const buttonEl = document.getElementById('reset');
-const horseSound = document.getElementById('horse-sound');
-const dogSound = document.getElementById('dog-sound');
-const catSound = document.getElementById('cat-sound');
+
 
 
 // set event listeners 
 horseEl.addEventListener('click', () => {
-    horseSound.play();
-    h1El.textContent = 'horsey';
-    document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/e6/3f/ac/e63fac00637cce9fb90d67683d3b5e9c.jpg') ";
+    makeSoundAndChangeH1ForHorse();
 });
 
 dogEl.addEventListener('click', () => {
-    dogSound.play();
-    h1El.textContent = 'doggie';
-    document.body.style.backgroundImage = "url('https://i0.wp.com/dailydot.com/wp-content/uploads/692/91/5f3554c793183fa4176cd2de936c83c5.jpg') ";
+    makeSoundAndChangeH1ForDog();
 });
 
 catEl.addEventListener('click', () => {
-    catSound.play();
-    h1El.textContent = 'kitty';
-    document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
-
-});
-
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'c') {
-        catSound.play();
-        h1El.textContent = 'kitty';
-        document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
-    }
-    if (event.key === 'k') {
-        catSound.play();
-        h1El.textContent = 'kitty';
-        document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
-    }
-    if (event.key === 'd') {
-        dogSound.play();
-        h1El.textContent = 'doggie';
-        document.body.style.backgroundImage = "url('https://i0.wp.com/dailydot.com/wp-content/uploads/692/91/5f3554c793183fa4176cd2de936c83c5.jpg') ";
-    }
-    if (event.key === 'h') {
-        horseSound.play();
-        h1El.textContent = 'horsey';
-        document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/e6/3f/ac/e63fac00637cce9fb90d67683d3b5e9c.jpg') ";
-    }
-
-    if (event.key === 'r') {
-        h1El.textContent = '';
-        document.body.style.backgroundImage = "url('https://cdn.wallpapersafari.com/26/51/PDOjt4.jpg') ";
-    }
+    makeSoundAndChangeH1ForCat();
 });
 
 buttonEl.addEventListener('click', () => {
-    h1El.textContent = 'Who is your BFF?';
-    document.body.style.backgroundImage = "url('https://cdn.wallpapersafari.com/26/51/PDOjt4.jpg') ";
+    reset();
 });
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'c') {
+        makeSoundAndChangeH1ForCat();
+    }
+    if (event.key === 'k') {
+        makeSoundAndChangeH1ForCat();    
+    }
+    if (event.key === 'd') {
+        makeSoundAndChangeH1ForDog(); 
+    }
+    if (event.key === 'h') {
+        makeSoundAndChangeH1ForHorse();
+    }
+
+    if (event.key === 'r') {
+        reset();
+    }
+});
+
