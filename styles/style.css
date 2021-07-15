@@ -61,15 +61,6 @@ section {
     align-items: center;
 }
 
-#animal-name{
-    font-family: 'Space Mono', Courier, monospace;
-    color:hotpink;
-    background-color: rgba(0,0,0,.75);
-    font-size:3em;
-    padding:10px;
-    border-radius: 20px;
-}
-
 .heading-zone {
     margin:50px;
 }
@@ -95,6 +86,15 @@ section {
    border-radius: 70px;
    width:100px;
  }
+
+ #animal-name{
+  font-family: 'Space Mono', Courier, monospace;
+  color:hotpink;
+  background-color: rgba(0,0,0,.75);
+  font-size:3em;
+  padding:10px;
+  border-radius: 20px;
+}
 
  #reset{
   font-family: 'Space Mono', monospace;
