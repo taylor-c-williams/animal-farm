@@ -3,23 +3,45 @@ body {
     background-color: var(--color2);
 }
 
-@keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
+@-webkit-keyframes hvr-hang {
+    0% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
     }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
+    50% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
     }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
     }
-
+  }
+  @keyframes hvr-hang {
+    0% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    50% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @-webkit-keyframes hvr-hang-sink {
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @keyframes hvr-hang-sink {
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
   }
 
 main {
@@ -55,25 +77,40 @@ section {
 
  section img {
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    /* transition: all .2s ease-in-out; */
     padding: 5px;
     margin-left:50px;
     box-shadow: 19px 19px 1px 5px rgba(128, 128, 128, 0.5);
     border-radius: 20px;
     border: dashed .5px;
     width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-section img:hover {
-  transform: scale(1.1);
-}
+section img:hover, img:focus, img:active {
+    -webkit-animation-name: hvr-hang-sink, hvr-hang;
+    animation-name: hvr-hang-sink, hvr-hang;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+  }
+
 
 header {
-    /* display: flex;
-    justify-content: flex-end; 
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow); */
+
 }
 
 footer {
@@ -94,25 +131,7 @@ h2 {
     margin-right: 20px;
 }
 
-/* .main-logo {
-    animation: pulse 5s infinite ease-in-out;
-} */
-
-/* header img {
-    height: var(--header-height);
-} */
-
-p {
-    /* margin: var(--gutter); */
-}
   
 footer {
-    /* position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow); */
+
 }

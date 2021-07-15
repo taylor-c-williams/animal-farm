@@ -29,11 +29,14 @@ catEl.addEventListener('click', () => {
 document.addEventListener('keydown', function(event) {
     if (event.key === 'c') {
         catSound.play();
+        h1El.textContent = 'cat';
     }
     if (event.key === 'd') {
         dogSound.play();
+        h1El.textContent = 'dog';
     }
     if (event.key === 'h') {
         horseSound.play();
+        h1El.textContent = 'horse';
     }
 });
