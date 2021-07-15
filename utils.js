@@ -5,6 +5,7 @@
 const horseSound = document.getElementById('horse-sound');
 const dogSound = document.getElementById('dog-sound');
 const catSound = document.getElementById('cat-sound');
+const chime = document.getElementById('chime');
 const h1El = document.getElementById('animal-name');
 
 export function makeSoundAndChangeH1ForHorse() {
@@ -28,6 +29,7 @@ export function makeSoundAndChangeH1ForCat() {
 }
 
 export function reset() {
+    chime.play();
     h1El.textContent = 'Who is your BFF?';
     document.body.style.backgroundImage = "url('https://cdn.wallpapersafari.com/26/51/PDOjt4.jpg') ";
 }
