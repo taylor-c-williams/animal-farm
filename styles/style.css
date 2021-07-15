@@ -98,7 +98,6 @@ section {
 
  #reset{
   font-family: 'Space Mono', monospace;
-  /* margin-left:15px; */
   border: dashed 1px;
   background-color:white;
   box-shadow: 5px 5px 1px 0px rgba(148, 75, 228, .5);
