@@ -78,6 +78,7 @@ section {
     display: flex;
    flex-direction: row;
    background-color:hotpink;
+   border: 2px dashed;
    opacity: .95;
    padding:50px;
    border-radius: 20px;
@@ -137,6 +138,7 @@ footer {
     border-radius: 40px;
     padding:20px;
     font-family: 'Courier New', Courier, monospace;
+    border: 1px dashed white;
 }
 
   
