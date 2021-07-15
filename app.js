@@ -3,6 +3,7 @@ const h1El = document.getElementById('animal-name');
 const horseEl = document.getElementById('horse-image');
 const dogEl = document.getElementById('dog-image');
 const catEl = document.getElementById('cat-image');
+const buttonEl = document.getElementById('reset');
 const horseSound = document.getElementById('horse-sound');
 const dogSound = document.getElementById('dog-sound');
 const catSound = document.getElementById('cat-sound');
@@ -50,4 +51,9 @@ document.addEventListener('keydown', function(event) {
         h1El.textContent = 'horsey';
         document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/e6/3f/ac/e63fac00637cce9fb90d67683d3b5e9c.jpg') ";
     }
+});
+
+buttonEl.addEventListener('click', () => {
+    h1El.textContent = '';
+    document.body.style.backgroundImage = "url('https://cdn.wallpapersafari.com/26/51/PDOjt4.jpg') ";
 });
