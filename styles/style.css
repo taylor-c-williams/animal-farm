@@ -163,11 +163,6 @@ section img:hover, img:focus, img:active {
     animation-direction: normal, alternate;
   }
 
-
-header {
-
-}
-
 footer {
     display: flex;
     margin-top: 100px;
@@ -184,9 +179,4 @@ footer {
     padding:20px;
     font-family: 'Space Mono', Courier, monospace;
     border: 1px dashed white;
-}
-
-  
-footer {
-
 }
