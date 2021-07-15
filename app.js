@@ -36,10 +36,10 @@ document.addEventListener('keydown', function(event) {
         document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
     }
     if (event.key === 'k') {
-      catSound.play();
-      h1El.textContent = 'kitty';
-      document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
-  }
+        catSound.play();
+        h1El.textContent = 'kitty';
+        document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
+    }
     if (event.key === 'd') {
         dogSound.play();
         h1El.textContent = 'doggie';
