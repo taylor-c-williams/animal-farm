@@ -35,6 +35,11 @@ document.addEventListener('keydown', function(event) {
         h1El.textContent = 'kitty';
         document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
     }
+    if (event.key === 'k') {
+      catSound.play();
+      h1El.textContent = 'kitty';
+      document.body.style.backgroundImage = "url('https://catdolls.weebly.com/uploads/1/0/9/6/109685771/texas-ragdoll-kittenberry-castle-website-cats-kittens-persian-himalayan-23_orig.jpg') ";
+  }
     if (event.key === 'd') {
         dogSound.play();
         h1El.textContent = 'doggie';
@@ -43,6 +48,6 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'h') {
         horseSound.play();
         h1El.textContent = 'horsey';
-         document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/e6/3f/ac/e63fac00637cce9fb90d67683d3b5e9c.jpg') ";
+        document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/e6/3f/ac/e63fac00637cce9fb90d67683d3b5e9c.jpg') ";
     }
 });
